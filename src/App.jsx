@@ -20,7 +20,7 @@ function App() {
   const [undid, setUndid] = useState([]);
 
   const handlePoint = (e) =>{
-    console.log(e)
+
     const positions = {
       eixoX: e.clientX,
       eixoY: e.clientY
@@ -66,8 +66,8 @@ function App() {
     <div className="App" onClick={handlePoint}>
 
       <div className='buttons'>
-        <button onClick={handleUndo}>Undo</button>
-        <button onClick={handleRedo}>Redo</button>
+        <button onClick={handleUndo} title='Desfazer'>Undo</button>
+        <button onClick={handleRedo} title='Refazer'>Redo</button>
       </div>
 
       {list.map((e, index)=>(
